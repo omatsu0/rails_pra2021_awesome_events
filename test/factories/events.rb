@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :event do
     owner
@@ -6,6 +8,5 @@ FactoryBot.define do
     sequence(:content) { |i| "イベント本文#{i}" }
     start_at { rand(1..30).days.from_now }
     end_at { start_at + rand(1..30).hours }
-    
   end
 end
